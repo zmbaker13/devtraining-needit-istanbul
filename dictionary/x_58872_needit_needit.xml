@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="Request Type" mandatory="true" max_length="40" name="u_choice_3" type="string">
+            <choice>
+                <element label="Human Resources" sequence="0" value="hr"/>
+                <element label="Facilities" sequence="1" value="facilities"/>
+                <element label="Legal" sequence="2" value="legal"/>
+                <element label="NICU" sequence="3" value="NICU"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="Legal 1" label="What Needed" mandatory="true" max_length="40" name="u_choice_4" type="string">
+            <choice>
+                <element label="Human Resources 1" sequence="0" value="hr1"/>
+                <element label="Human Resources 2" sequence="1" value="hr2"/>
+                <element label="Facilities 1" sequence="2" value="Facilities 1"/>
+                <element label="Facilities 2" sequence="3" value="Facilities 2"/>
+                <element label="Legal 1" sequence="4" value="Legal 1"/>
+                <element label="Legal 2" sequence="5" value="Legal 2"/>
+                <element label="NICU 1" sequence="6" value="NICU 1"/>
+                <element label="NICU 2" sequence="7" value="NICU 2"/>
+            </choice>
+        </element>
+        <element label="When Needed" mandatory="true" max_length="40" name="u_glide_date_time_1" type="glide_date_time"/>
+        <element label="Requested For" mandatory="true" max_length="32" name="u_reference_2" reference="sys_user" type="reference"/>
+    </element>
+</database>
